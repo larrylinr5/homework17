@@ -31,6 +31,26 @@
                     $('#CheckBoxGroup input').prop("checked", check);
                 });
 
+            $('#sel01').change(sel01_change);
+
+            $('img').hover(hoverimg1,hoverimg2)
+        }
+
+        function hoverimg1()
+        {
+            $(this).css("cursor","pointer");
+            $(this).css("transform","scale(1.1)").css("transition-duration(0.1s)");
+        }
+
+        function hoverimg2()
+        {
+            $(this).css("transform","scale(1)").css("transition-duration(0.1s)");
+        }
+
+        function sel01_change() {
+            var val = $(this).val();
+            $('#ImgGroup2 img').removeClass();
+            $('#ImgGroup2 img').addClass(val);
         }
 
         function GetBmi(height, weight) {
@@ -44,6 +64,19 @@
             init();
         });
     </script>
+    <style>
+        .br15 {
+            border-radius: 15px;
+        }
+
+        .br30 {
+            border-radius: 30px;
+        }
+
+        .br50 {
+            border-radius: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -75,7 +108,9 @@
             </div>
         </div>
     </div>
+
     <hr>
+
     <div id="ImgGroup2" class="row" style="margin:10px; padding-top:100px">
         <div class="col-12">
             <select id="sel01">
@@ -86,6 +121,21 @@
         </div>
 
         <div class="col-4">
+            <img src="Images/1.jpg" style="width:100%" class="br15" />
+        </div>
+        <div class="col-4">
+            <img src="Images/2.jpg" style="width:100%" class="br15" />
+        </div>
+        <div class="col-4">
+            <img src="Images/3.jpg" style="width:100%" class="br15" />
+        </div>
+    </div>
+
+    <hr>
+    <br><br><br>
+
+    <div class="row" style="margin:10px">
+        <div class="col-4">
             <img src="Images/1.jpg" style="width:100%" class="img-responsive" />
         </div>
         <div class="col-4">
@@ -93,6 +143,17 @@
         </div>
         <div class="col-4">
             <img src="Images/3.jpg" style="width:100%" class="img-responsive" />
+        </div>
+    </div>
+    <div class="row" style="margin:10px">
+        <div class="col-4">
+            <img src="Images/4.jpg" style="width:100%" class="img-responsive" />
+        </div>
+        <div class="col-4">
+            <img src="Images/5.jpg" style="width:100%" class="img-responsive" />
+        </div>
+        <div class="col-4">
+            <img src="Images/6.jpg" style="width:100%" class="img-responsive" />
         </div>
     </div>
 </body>
